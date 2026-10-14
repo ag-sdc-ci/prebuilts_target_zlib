@@ -1,0 +1,20 @@
+{
+	"provideLibs": [	
+		    "libdummy_binary_libz.a-x86_64-v2.so",
+		    "libdummy_binary_libz.a.so",
+		    "libdummy_ext_zlib-x86_64-v2.so",
+		    "libdummy_ext_zlib.so",
+		    "libdummy_headers_ext_zlib-x86_64-v2.so",
+		    "libdummy_headers_ext_zlib.so",
+		    "libz-x86_64-v2.so",
+		    "libz.so",
+		    "zlib-x86_64-v2.so",
+		    "zlib.so"
+	],
+	"requireLibs": [	
+		    "libc.so",
+		    "libdl.so",
+		    "libm.so"
+	],
+	"visible": true
+}
