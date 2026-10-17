@@ -55,3 +55,43 @@ cc_defaults {
     static_libs: ["libz"],
     host_supported: true,
 }
+
+cc_prebuilt_library {
+    name: "libz_stable",
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    host_supported: true,
+    check_elf_files: false,
+    export_include_dirs: [
+        "src/include",
+    ],
+    prefer: true,
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
+    shared: {
+        srcs: ["src/lib/libz.so"],
+    },
+    static: {
+        srcs: ["src/lib/libz.a"],
+    },
+}
+
+ndk_headers {
+    name: "libz_headers",
+    from: "src/include",
+    to: "",
+    srcs: [
+        "src/include/zconf.h",
+        "src/include/zlib.h",
+    ],
+}
+
+ndk_library {
+    name: "libz",
+    symbol_file: "libz.map.txt",
+    first_version: "9",
+    unversioned_until: "current",
+}
