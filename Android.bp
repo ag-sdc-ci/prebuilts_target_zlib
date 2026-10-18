@@ -33,6 +33,8 @@ cc_prebuilt_library {
 
 cc_prebuilt_library_static {
     name: "libz_static",
+    ramdisk_available: true,
+    vendor_ramdisk_available: true,
     vendor_available: true,
     product_available: true,
     recovery_available: true,
