@@ -85,7 +85,7 @@ cc_prebuilt_library {
 
 ndk_headers {
     name: "libz_headers",
-    license: "Android-Apache-2.0",
+    license: "NOTICE",
     from: "src/include",
     to: "",
     srcs: [
