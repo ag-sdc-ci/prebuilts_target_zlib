@@ -22,11 +22,23 @@ cc_prebuilt_library {
         "//apex_available:platform",
     ],
     min_sdk_version: "29",
-    shared: {
-        srcs: ["src/lib/libz.so"],
-    },
-    static: {
-        srcs: ["src/lib/libz.a"],
+    multilib: {
+        lib32: {
+            shared: {
+                srcs: ["src/lib/libz.so"],
+            },
+            static: {
+                srcs: ["src/lib/libz.a"],
+            },
+        },
+        lib64: {
+            shared: {
+                srcs: ["src/lib64/libz.so"],
+            },
+            static: {
+                srcs: ["src/lib64/libz.a"],
+            },
+        },
     },
 }
 
@@ -49,7 +61,14 @@ cc_prebuilt_library_static {
         "//apex_available:platform",
     ],
     min_sdk_version: "apex_inherit",
-    srcs: ["src/lib/libz.a"],
+    multilib: {
+        lib32: {
+            srcs: ["src/lib/libz.a"],
+        },
+        lib64: {
+            srcs: ["src/lib64/libz.a"],
+        },
+    },
 }
 
 
@@ -67,11 +86,23 @@ cc_prebuilt_library {
         "//apex_available:anyapex",
         "//apex_available:platform",
     ],
-    shared: {
-        srcs: ["src/lib/libz.so"],
-    },
-    static: {
-        srcs: ["src/lib/libz.a"],
+    multilib: {
+        lib32: {
+            shared: {
+                srcs: ["src/lib/libz.so"],
+            },
+            static: {
+                srcs: ["src/lib/libz.a"],
+            },
+        },
+        lib64: {
+            shared: {
+                srcs: ["src/lib64/libz.so"],
+            },
+            static: {
+                srcs: ["src/lib64/libz.a"],
+            },
+        },
     },
 }
 
