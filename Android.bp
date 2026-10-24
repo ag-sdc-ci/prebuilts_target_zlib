@@ -52,11 +52,6 @@ cc_prebuilt_library_static {
     srcs: ["src/lib/libz.a"],
 }
 
-cc_defaults {
-    name: "zlib_fuzz_defaults",
-    static_libs: ["libz"],
-    host_supported: true,
-}
 
 cc_prebuilt_library {
     name: "libz_stable",
@@ -80,16 +75,6 @@ cc_prebuilt_library {
     },
 }
 
-ndk_headers {
-    name: "libz_headers",
-    license: "NOTICE",
-    from: "src/include",
-    to: "",
-    srcs: [
-        "src/include/zconf.h",
-        "src/include/zlib.h",
-    ],
-}
 
 ndk_library {
     name: "libz",
