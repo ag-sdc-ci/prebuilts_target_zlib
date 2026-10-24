@@ -12,7 +12,6 @@ cc_prebuilt_library {
     ramdisk_available: true,
     vendor_ramdisk_available: true,
     recovery_available: true,
-    host_supported: true,
     check_elf_files: false,
     export_include_dirs: [
         "src/include",
@@ -38,7 +37,6 @@ cc_prebuilt_library_static {
     vendor_available: true,
     product_available: true,
     recovery_available: true,
-    host_supported: true,
     check_elf_files: false,
     export_include_dirs: [
         "src/include",
@@ -65,7 +63,6 @@ cc_prebuilt_library {
     vendor_available: true,
     product_available: true,
     recovery_available: true,
-    host_supported: true,
     check_elf_files: false,
     export_include_dirs: [
         "src/include",
